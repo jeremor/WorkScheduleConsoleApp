@@ -19,7 +19,7 @@ if (!string.IsNullOrEmpty(startTime) && !string.IsNullOrEmpty(endTime))
     {
         Console.WriteLine("Would you like to see the shift's length? (y/n)");
         string? answer = Console.ReadLine();
-        if (!string.IsNullOrEmpty(answer) && !string.IsNullOrEmpty(startTime) && !string.IsNullOrEmpty(endTime))
+        if (answer == "y" && !string.IsNullOrEmpty(startTime) && !string.IsNullOrEmpty(endTime))
         {
             decimal workShiftLegth = validator.ReturnWorkShiftLength(date, startTime, endTime);
             Console.WriteLine($"Today's shift was {workShiftLegth} hours");
